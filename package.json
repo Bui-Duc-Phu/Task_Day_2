@@ -9,7 +9,6 @@
     "start": "node src/studentManagement/index.js"
   },
   "dependencies": {
-    "fs": "^0.0.1-security",
     "readline-sync": "^1.4.10"
   }
 }
