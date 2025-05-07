@@ -12,10 +12,12 @@ const addStudent = () => {
     studentController.addStudent(newStudent); 
 };
 
+const GetData = () => studentController.students
+
 
 while (true) {
     console.log("\n==== MENU ====");
-    console.log("1. Run test exercise2");
+    console.log("1. add student");
     console.log("0. Exit");
     const choice = readline.question("Your choice: ");
 
@@ -24,7 +26,10 @@ while (true) {
             console.log("Bye!");
             process.exit();
         case "1":
-            addStudent();
+           console.log(addStudent())
+            break;
+        case "2":
+            console.log(GetData())
             break;
         default:
             console.log("Invalid choice");
