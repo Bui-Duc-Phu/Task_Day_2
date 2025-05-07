@@ -40,3 +40,6 @@ Trường hợp nếu tồn tại cặp faild:
 
 - trường hợp mỗi thành viên có thể gép đôi với nhiều người để tạo ra nhiều cặp faild thì ta có 25 cách bốc cặp faild
 => ta sẽ không thể bốc được cặp bào nếu tồn tại khả năng 25 cách bốc cặp faild
+
+
+[Click vào đây để xem mã nguồn của TeamsFormation.js](src/teamsFormation/index.js)
