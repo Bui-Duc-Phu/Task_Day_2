@@ -1,6 +1,4 @@
 
-
-
 const readline = require('readline-sync');
 
 const studentController = require('./controller/StudentController');
@@ -10,9 +8,7 @@ const Student = require('./model/Student');
 const addStudent = (student) => {
     studentController.addStudent(student);
 };
-
-const GetData = () => studentController.students
-
+const allStudent = () => studentController.students
 
 const searchStudentByName = (name) => {
     const lowerName = name.toLowerCase();
@@ -27,7 +23,7 @@ const searchStudentByName = (name) => {
 };
 
 const StudentStatistics = () =>{
-    const students = GetData();
+    const students = allStudent();
     const totalStudents = students.length;
 
     if (totalStudents === 0) {
@@ -55,18 +51,16 @@ const StudentStatistics = () =>{
         console.log(`Average score           : ${averageScore.toFixed(2)}`);
         console.log(`Excellent (>= 8)        : ${excellentCount}`);
         console.log(`Good (>= 6.5 and < 8)   : ${goodCount}`);
-        console.log(`Average (< 6.5)        : ${averageCount}`);
+        console.log(`Average (< 6.5)         : ${averageCount}`);
         console.log("=============================\n");
         
     }
 }
 
 
-
-
 while (true) {
     console.log("\n==== MENU ====");
-    console.log("1. add student");
+    console.log("1. add student"); 
     console.log("2. Show all students");
     console.log("3. Search student by name");
     console.log("4. Student Statistics");
@@ -81,7 +75,7 @@ while (true) {
             addStudent(studentController.promptStudentData());
             break;
         case "2":
-            console.log(GetData())
+            console.log(allStudent())
             break;
         case "3":
             const name = readline.question("Enter student name to search: ");

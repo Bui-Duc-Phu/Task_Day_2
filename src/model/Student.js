@@ -8,6 +8,4 @@ class Student {
     }
 
 }
-
-// Export class
 module.exports = Student;
