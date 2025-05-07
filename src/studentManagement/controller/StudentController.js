@@ -5,24 +5,29 @@ const readline = require('readline-sync');
 
 const studentsFilePath = path.join(__dirname, '../data', 'data.json');
 
+
 let students = [];
 
-if (fs.existsSync(studentsFilePath)) {
-    const rawData = fs.readFileSync(studentsFilePath, 'utf8');
-    try {
-        if (rawData.trim()) {
-            students = JSON.parse(rawData);
+
+function loadData() {
+    if (fs.existsSync(studentsFilePath)) {
+        const rawData = fs.readFileSync(studentsFilePath, 'utf8');
+        try {
+            if (rawData.trim()) {
+                students = JSON.parse(rawData);
+            }
+        } catch (err) {
+            console.error('Lỗi đọc file data.json:', err.message);
+            students = [];
         }
-    } catch (err) {
-        console.error('Lỗi đọc file data.json:', err.message);
-        students = [];
     }
 }
+
+loadData();
 
 function isMSSVExists(mssv) {
     return students.some(student => student.MSSV === mssv);
 }
-
 
 function addStudent(student) {
     if (!(student instanceof Student)) {
@@ -39,7 +44,6 @@ function addStudent(student) {
     console.log(`Student ${student.name} added successfully`);
     return students;
 }
-
 
 const promptStudentData = () => {
     let mssv;
@@ -58,7 +62,14 @@ const promptStudentData = () => {
     return new Student(mssv, age, averageScore, name);
 };
 
+function searchStudentByName(name) {
+    const lowerName = name.toLowerCase();
+    return students.find(student => student.name.toLowerCase() === lowerName) || null;
+}
 
-
-
-module.exports = { students, addStudent,promptStudentData };
+module.exports = {
+    students,
+    addStudent,
+    promptStudentData,
+    searchStudentByName 
+};

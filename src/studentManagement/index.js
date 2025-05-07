@@ -5,25 +5,19 @@ const studentController = require('./controller/StudentController');
 const Student = require('./model/Student');
 
 
-const addStudent = (student) => {
-    studentController.addStudent(student);
-};
-const allStudent = () => studentController.students
 
-const searchStudentByName = (name) => {
-    const lowerName = name.toLowerCase();
-    const student = studentController.students.find(student =>
-        student.name.toLowerCase() === lowerName
-    );
+const searchStudentByName = () => {
+    const name = readline.question("Enter student name to search: ");
+    const student = studentController.searchStudentByName(name);
     if (student) {
-        return student;
+        console.log('Found student:', student);
     } else {
-        return null;
+        console.log("Student not found");
     }
 };
 
 const StudentStatistics = () =>{
-    const students = allStudent();
+    const students = studentController.students;
     const totalStudents = students.length;
 
     if (totalStudents === 0) {
@@ -45,7 +39,7 @@ const StudentStatistics = () =>{
                 averageCount++;
             }
         });
-        
+    
         console.log("\n\n===== STUDENT STATISTICS =====");
         console.log(`Total students          : ${totalStudents}`);
         console.log(`Average score           : ${averageScore.toFixed(2)}`);
@@ -72,19 +66,13 @@ while (true) {
             console.log("Bye!");
             process.exit();
         case "1":
-            addStudent(studentController.promptStudentData());
+            studentController.addStudent(studentController.promptStudentData());
             break;
         case "2":
-            console.log(allStudent())
+            console.log(studentController.students)
             break;
         case "3":
-            const name = readline.question("Enter student name to search: ");
-            const student = searchStudentByName(name);
-            if (student) {
-                console.log('Found student:', student);
-            } else {
-                console.log("Student not found");
-            }
+            searchStudentByName();
             break;
         case "4":
             StudentStatistics();

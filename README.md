@@ -1,3 +1,12 @@
+## Student Management
+
+
+
+<br>
+<br>
+<br>
+
+
 ## TeamsFormation
 
 
@@ -42,4 +51,4 @@ Trường hợp nếu tồn tại cặp faild:
 => ta sẽ không thể bốc được cặp bào nếu tồn tại khả năng 25 cách bốc cặp faild
 
 
-[Click vào đây để xem mã nguồn của TeamsFormation.js](src/teamsFormation/index.js)
+[Click vào đây để xem mã nguồn của TeamsFormation](src/teamsFormation/index.js)
