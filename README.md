@@ -1,7 +1,6 @@
 ## Student Management
 
-- không Viết phuong Thức vào Class Student  - > Viết các hàm riêng biệt để xử lý list Json làm đàu vào 
-
+không Viết phuong Thức vào Class Student  - > Viết các hàm riêng biệt để xử lý list Json làm đàu vào 
 
 [Click vào đây để xem mã nguồn của Student_Management](src/studentManagement)
 
