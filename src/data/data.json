@@ -4,31 +4,53 @@
     "age": 20,
     "averageScore": 8.5,
     "name": "Nguyen Van A"
+  },
+  {
+    "MSSV": "SV002",
+    "age": 21,
+    "averageScore": 7.5,
+    "name": "Nguyen Van B"
+  },
+  {
+    "MSSV": "SV003",
+    "age": 22,
+    "averageScore": 9,
+    "name": "Nguyen Van C"
+  },
+  {
+    "MSSV": "SV004",
+    "age": 23,
+    "averageScore": 6.5,
+    "name": "Nguyen Van D"
+  },
+  {
+    "MSSV": "SV005",
+    "age": 24,
+    "averageScore": 8,
+    "name": "Nguyen Van E"
+  },
+  {
+    "MSSV": "SV001",
+    "age": 20,
+    "averageScore": 8.5,
+    "name": "Nguyen Van A"
+  },
+  {
+    "MSSV": "n22",
+    "age": 2,
+    "averageScore": 312,
+    "name": "bui linh"
+  },
+  {
+    "MSSV": "2",
+    "age": 2,
+    "averageScore": 2,
+    "name": "2"
+  },
+  {
+    "MSSV": "232",
+    "age": 232,
+    "averageScore": 232,
+    "name": "23"
   }
-    ,
-    {
-        "MSSV": "SV002",
-        "age": 21,
-        "averageScore": 7.5,
-        "name": "Nguyen Van B"
-    },
-    {
-        "MSSV": "SV003",
-        "age": 22,
-        "averageScore": 9.0,
-        "name": "Nguyen Van C"
-    },
-    {
-        "MSSV": "SV004",
-        "age": 23,
-        "averageScore": 6.5,
-        "name": "Nguyen Van D"
-    },
-    {
-        "MSSV": "SV005",
-        "age": 24,
-        "averageScore": 8.0,
-        "name": "Nguyen Van E"
-    }
-  
 ]
