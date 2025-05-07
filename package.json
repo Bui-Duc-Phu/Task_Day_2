@@ -6,7 +6,7 @@
   "author": "Bui-Duc-Phu <buiphu05012002@gmail.com>",
   "license": "MIT",
   "scripts": {
-    "start": "node src/index.js"
+    "start": "node src/studentManagement/index.js"
   },
   "dependencies": {
     "fs": "^0.0.1-security",
